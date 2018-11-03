@@ -1,0 +1,72 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img:hover{
+    border-bottom: solid 2px rgba(87, 86, 86, 0.3);
+    border-right: solid 2px rgba(87, 86, 86, 0.3);
+    box-shadow: 7px 7px rgb(139, 139, 139, 0.2);
+}
+
+
+p, li{
+    color: grey;
+}
+
+h1{
+    background-color: skyblue;
+    color: white;
+    border-bottom: solid 2px rgb(64, 97, 197);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h2{
+    background-color: palevioletred;
+    color: white;
+    border-bottom: solid 2px rgb(190, 58, 58);
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    background-color: lightgreen;
+    color: white;
+    border-bottom: solid 2px rgb(25, 192, 25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#openPara{
+    font-size: 20px;
+    width: 100%;
+}
+
+#scientific{
+    font-size: 75%;
+    display: block;
+}
+
+@media screen and (max-width: 800px){
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    h3{
+        width: 100%;
+    }
+}
