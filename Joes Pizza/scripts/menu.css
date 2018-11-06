@@ -208,6 +208,33 @@ body {
     font-style: italic;
   }
 
+  /* Contact */
+
+  .contactInfo{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    width: 50%;
+    font-size: 150%;
+    padding: 10px 0 10px 0;
+  }
+
+  .weHope{
+    padding-top: 30px;
+    font-size: 250%;
+    font-weight: lighter;
+  }
+
+  .underline{
+    border-top: solid 1px #4CAF50;
+    border-bottom: solid 1px #4CAF50;
+  }
+
+  .contactColor{
+    color: #4CAF50;
+  }
+
+
   /* Footer */
 
   #footer{
@@ -275,6 +302,15 @@ body {
       width: 100%;
       font-size: 125%;
       height: 200px;
+    }
+
+    .subscribe .button{
+      width: 50%;
+      text-align: center;
+    }
+
+    .contactInfo{
+      width: 100%;
     }
 
     .joe{
