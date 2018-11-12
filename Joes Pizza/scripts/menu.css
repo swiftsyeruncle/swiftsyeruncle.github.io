@@ -89,6 +89,18 @@ body {
     color: #333;
 }
 
+.reqField{
+    text-align: center;
+    font-size: 135%;
+    color: #333;
+    margin-bottom: -40px;
+}
+
+.reqRed{
+  color: red;
+  font-size: 135%;
+}
+
 #welcome{
     text-align: center;
     font-size: 190%;
