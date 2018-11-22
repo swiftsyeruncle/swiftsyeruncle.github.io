@@ -80,3 +80,21 @@ li{
     border-bottom: solid 1px #3A4664;
     padding: 20px 0 20px 0;
 }
+
+@media screen and (max-width: 600px){
+
+    form{
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 100%;
+    }
+
+    #myList{
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 100%; 
+    }
+
+}
