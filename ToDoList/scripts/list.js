@@ -19,14 +19,12 @@ initApplication = () =>{
         
         clearList(); //calls the clearList function
         drawList(); //calls the drawList function
-        removeListItem();
-
     });
 
     clearList = () =>{
         let listParent = document.getElementById("todoList");
         while (listParent.hasChildNodes()){
-            listParent.removeChild(listParent.firstChild); //clearList 
+            listParent.removeChild(listParent.firstChild); //clears the list
         }
     }
 
@@ -35,25 +33,31 @@ initApplication = () =>{
         let listParent = document.getElementById("todoList");
 
         for(let i = 0; i < todoArray.length; i++){
-            let newElement = document.createElement("li");
+            let newElement = document.createElement("li"); //creates the list element 
             newElement.innerText = todoArray[i];
-            listParent.appendChild(newElement);
-        }
+
+            newElement.addEventListener("contextmenu", function(evt) {
+
+                evt.preventDefault();
+                alert("Remove list item?");
+                removeListItem(newElement.innerText);
+        });
+
+        listParent.appendChild(newElement); //uses the appendChild method to add new list item
 
     }
 
-    removeListItem = () =>{
+    removeListItem = (itemToRemove) =>{
 
-        let listParent = document.getElementById("todoList");
-        
-        listParent.addEventListener('contextmenu', function(evt) {
+        const index = todoArray.indexOf(itemToRemove);
 
-            evt.preventDefault();
-            alert('Remove list item?');
-            listParent.remove(listParent.firstChild);
+        if (index !== -1) {
+            todoArray.splice(index, 1);
+        }
+        clearList();
+        drawList();
             
-        });
-
+        }     
         
     }
 }
