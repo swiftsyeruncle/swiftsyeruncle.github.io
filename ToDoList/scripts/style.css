@@ -81,6 +81,33 @@ li{
     padding: 20px 0 20px 0;
 }
 
+#menu{
+    width: 200px;
+    border-style: solid;
+    border: solid 2px #3A4664;
+    border-radius: 5px;
+    background-color: white;
+    color: #3A4664;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: fixed;
+    display: none;
+}
+
+.menu-item{
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.menu-item:hover{
+    background-color: #3A4664;
+    color: white;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px){
 
     form{

@@ -39,9 +39,31 @@ initApplication = () =>{
             newElement.addEventListener("contextmenu", function(evt) {
 
                 evt.preventDefault();
-                alert("Remove list item?");
-                removeListItem(newElement.innerText);
-        });
+
+                let menuDisplayed = false;
+                let menuBox = null;
+                
+                window.addEventListener("contextmenu", function() {
+                    let left = arguments[0].clientX;
+                    let top = arguments[0].clientY;
+                            
+                    menuBox = window.document.querySelector("#menu");
+                    menuBox.style.left = left + "px";
+                    menuBox.style.top = top + "px";
+                    menuBox.style.display = "block";
+                            
+                    arguments[0].preventDefault();
+                            
+                    menuDisplayed = true;
+                }, false);
+                    
+                window.addEventListener("click", function() {
+                    if(menuDisplayed == true){
+                        menuBox.style.display = "none"; 
+                        removeListItem(newElement.innerText);
+                    }
+                }, true);
+            });
 
         listParent.appendChild(newElement); //uses the appendChild method to add new list item
 
@@ -52,10 +74,11 @@ initApplication = () =>{
         const index = todoArray.indexOf(itemToRemove);
 
         if (index !== -1) {
-            todoArray.splice(index, 1);
+            todoArray.splice(index, 1); //As long as our list has an item in it, you can remove that item. Uses the splice method. 
         }
-        clearList();
-        drawList();
+
+        clearList(); //Call back to the clearList function
+        drawList(); //Call back to the drawList function
             
         }     
         
